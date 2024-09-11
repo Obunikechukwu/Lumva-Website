@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Lumva</title>
 </head>
 <body>
     <!--navbar-->
-    <div class="container-fluid px-sm-4 mb-2">
+    <div class="container-fluid px-sm-4 my-2 brand-font">
       <nav class="navbar navbar-expand-lg bg-white fixed-top px-md-4">
-        <div class="container-fluid ">
+        <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img src="assets/logo and name.png" alt="brand name and logo" height="15">
           </a>
@@ -35,7 +34,7 @@
                 <a class="nav-link" href="contact-us.html">Contact Us</a>
               </li>
               <li class="nav-item">
-                <button type="button" class="btn btn-dark btn-sm mx-auto d-block" data-bs-toggle="modal" data-bs-target="#staticBackdrop">GET IN TOUCH</button>
+                <button type="button" class="btn btn-dark btn-sm mx-auto d-block p-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">GET IN TOUCH</button>
               </li>
             </ul>
           </div>
@@ -43,21 +42,107 @@
       </nav>
     </div>
       <!--showcase-->
-    <div class="container-fluid overflow-hidden d-flex justify-content-center video-container">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <video autoplay loop muted>
-            <source src="video/awake.mp4" >
-          </video>
+      <div id="carouselExampleRide" class="carousel slide pt-5 mt-4 bg-black text-white" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                  <h2 class="brand-font">Empowering the future, one line of code at a time.</h2>
+                  <p>Have a vision? Lumva is here to bring it to life. Let's talk.</p>
+                  <button type="button" class="btn btn-outline-light rounded-pill align-self-start mt-1">Get in touch</button>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/Illustration for webslider-03.png" class="img-fluid" alt="illustration">
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                  <h2 class="brand-font">Building smarter solutions for a connected world.</h2>
+                  <p>Let's innovate together. Contact Lumva to discuss your next big project.</p>
+                  <button type="button" class="btn btn-outline-light rounded-pill align-self-start mt-1">Contact us</button>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/Illustration for webslider-02.png" class="img-fluid" alt="illustration">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                  <h2 class="brand-font">Shaping tomorrow with today's technology.</h2>
+                  <p>Need tailored tech solutions? Lumva is just a click away. Let's connect!</p>
+                  <button type="button" class="btn btn-outline-light rounded-pill align-self-start mt-1">Get in touch</button>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/Illustration for webslider-04.png" class="img-fluid" alt="illustration">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                  <h2 class="brand-font">Engineering softwares that drive progress.</h2>
+                  <p>Don't miss out on Lumva's insights and trends. Join our community by subscribing today.</p>
+                  <button type="button" class="btn btn-outline-light rounded-pill align-self-start mt-1">Subscribe to newsletter</button>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/Illustration for webslider-01.png" class="img-fluid" alt="illustration">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                  <h2 class="brand-font">Where innovation meets precision.</h2>
+                  <p>Stay in the loop with Lumva. Suibscribe to our newsletter for the latest in tech and innovation.</p>
+                  <button type="button" class="btn btn-outline-light rounded-pill align-self-start mt-1">Subscribe to newsletter</button>
+                </div>
+                <div class="col-md-6">
+                  <img src="assets/Illustration for webslider-05.png" class="img-fluid" alt="illustration">
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <button class="carousel-control-prev custom-control" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next custom-control" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-    </div>
       <!--intro-->
     <div class="container-fluid  px-2 bg-white">
         <div class="row  justify-content-center text-center">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <div class="container pb-2 pt-4">
-                    <p class= "letter-spaced lead pb-0">INNOVATION THROUGH CREATIVITY</p>
+                    <p class= "letter-spaced lead pb-0 brand-font">INNOVATION THROUGH CREATIVITY</p>
                     <p class="small">Web Design, Mobile App & Custom Software Development, Social Media Management, Marketing, Advertising, Video Production.</p>
                 </div>
             </div>
@@ -92,7 +177,7 @@
           <div class="container-fluid">
             <div class="d-flex p-3">
               <div class="line m-3"></div>
-              <h6 class="m-0 text-danger">Our Story</h6>
+              <h6 class="m-0 text-danger brand-font">Our Story</h6>
             </div>
             <div>
               <p class="small">Lumva is dedicated to providing innovative software solutions that empower businesses to overcome challenges and grow. Our mission is to deliver products and services that address real-world issues, ensuring that our clients succeed in today's competitive landscape.</p>
@@ -119,7 +204,7 @@
             </div>
             <div class="py-2">
                   <a href="about-us.html" class="link-danger link-offset-2"><img src="assets/caret-right.png" alt="" height="20">
-                    <p class="small d-inline">
+                    <p class="small d-inline brand-font">
                       MORE ABOUT US
                     </p>
                   </a>
@@ -171,10 +256,10 @@
     <div class="container-fluid">
       <div class="row g-0 p-4">
         <div class="col-md">
-          <p class="lead letter-spaced">TAILORED SERVICES BY EXPERTS</p>
+          <p class="lead letter-spaced brand-font">TAILORED SERVICES BY EXPERTS</p>
           <div class="d-flex p-3">
             <div class="line m-3"></div>
-            <h6 class="m-0 text-danger">What We Do</h6>
+            <h6 class="m-0 text-danger brand-font">What We Do</h6>
           </div>
           <p class="small">At Lumva, we blend imagination with technology to create IT solutions that inspire and transform. Our team crafts trendy designs and compelling branding that set your brand apart, while our custom websites and high-performance mobile apps provide seamless, engaging user experiences.
           <br><br>
@@ -183,7 +268,7 @@
           At Lumva, we push the boundaries of what's possible, delivering IT solutions that meet your needs and spark innovation.</p>
           <div class="py-5">
             <a href="our-services.html" class="link-danger link-offset-3"><img src="assets/caret-right.png" alt="" height="20">
-              <p class="small d-inline">
+              <p class="small d-inline brand-font">
                 VIEW OUR SERVICES
               </p>
               </a>
@@ -327,7 +412,7 @@
           </div>
       </div>
     </div>
-    <div class="container text-dark text-center mt-4 copyright">
+    <div class="container text-dark text-center mt-4 copyright brand-font">
       <p class="pt-3">Lumva &copy; 2024 Lumva</p>
     </div>
   </div>

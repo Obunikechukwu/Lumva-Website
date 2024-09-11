@@ -48,10 +48,8 @@ const words = ["INNOVATIVE", "EFFICIENT", "RESPONSIVE", "QUALITY", "CREATIVE", "
 document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.number');
     const animationDuration = 2000;
-    counters.forEach(counter => {
-        const target = parseFloat(counter.getAttribute('data-target'));
-        animateCount(counter, target, animationDuration);
-    });
+
+    // Function to animate the count
     function animateCount(element, target, duration) {
         let startTimestamp = null;
         const isDecimal = target % 1 !== 0;
@@ -78,7 +76,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.requestAnimationFrame(step);
     }
+
+    // Function to start animation when element is in view
+    function startAnimation(entry) {
+        const target = parseFloat(entry.target.getAttribute('data-target'));
+        animateCount(entry.target, target, animationDuration);
+        observer.unobserve(entry.target); // Stop observing after animation starts
+    }
+
+    // Intersection Observer to detect when elements are in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startAnimation(entry);
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust as needed (0.5 means 50% of the element must be in view)
+    });
+
+    // Observe all counter elements
+    counters.forEach(counter => observer.observe(counter));
 });
+
 //services
 document.addEventListener('DOMContentLoaded', function () {
     const items = document.querySelectorAll('.service-item');
@@ -116,18 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     setActive('service1');
 });
-//scroll up
-window.addEventListener('scroll', function() {
-    const elements = document.querySelectorAll('.first-home-ani');
-    elements.forEach(element => {
-      const position = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      
-      if (position < windowHeight - 100) {
-        element.classList.add('active');
-      }
-    });
-  });
   
 
 
