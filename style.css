@@ -127,6 +127,12 @@ body{
   display: block;
 }
 
+@media (max-width: 576px) {
+  .word {
+    font-size: 40px; 
+  }
+
+}
 
 @media (min-width: 768px) {
   .service-item {
@@ -156,4 +162,59 @@ body{
 
 .first-home-ani {
   transform: translateY(0);
+}
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* 20px from the bottom */
+  right: 30px; /* 30px from the right */
+  z-index: 99; /* Make sure it stays on top */
+  font-size: 18px; /* Button text size */
+  background-color: #555; /* Dark background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 15px; /* Padding */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Pointer/hand icon */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #000; /* Darker background on hover */
+}
+.logout-button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.table {
+  margin-bottom: 50px;
+}
+
+.table-header {
+  background-color: #1c1d1f;
+  color: #ffffff;
+}
+.sidebar {
+  background-color: #54cd76;
+  color: #ffffff;
+  padding: 15px;
+  height: 100vh;
+  position: fixed;
+  width: 250px;
+}
+.sidebar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  text-decoration: underline;
+}
+.content {
+  margin-left: 270px; /* To make space for the sidebar */
+  padding: 20px;
+}
+.logout-button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
 }
